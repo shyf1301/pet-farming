@@ -186,7 +186,7 @@ function farm() {
     }    
   }
 
-  outputString += "<br /><button onclick='addFarmFrags()' style='margin-bottom:5px'>Update</button><br />"
+  outputString += "<br /><button onclick='addFarmFrags()' style='margin-bottom:5px'>Add</button><br />"
   $("#farminglist").html(outputString);
   $("#farminglist").css("border","1px solid #555");
 }
