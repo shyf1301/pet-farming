@@ -185,7 +185,7 @@ function farm() {
       outputString += "&nbsp;" + addedFrags + " &nbsp; " + petArray[tierListArray[i]].name + "<br />";
     }    
   }
-  outputString += "&nbsp;" + totalEntries + " &nbsp; Entries left<br />"
+  outputString += "&nbsp;<br />&nbsp;" + totalEntries + " &nbsp; Entries left<br />"
   outputString += "<br /><button onclick='addFarmFrags()' style='margin-bottom:5px'>Add</button><br />"
   $("#farminglist").html(outputString);
   $("#farminglist").css("border","1px solid #555");
