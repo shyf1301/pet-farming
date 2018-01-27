@@ -200,9 +200,9 @@ function addFarmFrags() {
 }
 
 $(document).ready(function(){
-  knightLevel = parseInt(localStorage.getItem("knightLevel")) || 0;
+  knightLevel = parseInt(localStorage.getItem("knightLevel")) || 100;
   entries = parseInt(localStorage.getItem("entries")) || 10;
-  refills = parseInt(localStorage.getItem("refills")) || 0;
+  refills = parseInt(localStorage.getItem("refills")) || 3;
   $("#input-kl").val(knightLevel);
   $("#input-entries").val(entries);
   $("#input-refills").val(refills);
