@@ -26,11 +26,11 @@ var petArray =  [
                   {name:"Icy",        fragments:50,	req:[34,59,77,136]},
                   {name:"Squirrel",   fragments:10,	req:[36,63,81,138]},
                   {name:"Moon",       fragments:30,	req:[38,67,85,140]},
-                  {name:"Boom",       fragments:0,	req:[40,71,89,142]},
-                  {name:"Leo",        fragments:0,	req:[42,75,93,144]},
-                  {name:"Devil",      fragments:0,	req:[44,79,97,146]},
-                  {name:"Griffy",     fragments:0,	req:[46,83,101,148]},
-                  {name:"Mir",        fragments:0,	req:[48,87,105,150]},
+                  {name:"Boom",       fragments:10,	req:[40,71,89,142]},
+                  {name:"Leo",        fragments:10,	req:[42,75,93,144]},
+                  {name:"Devil",      fragments:10,	req:[44,79,97,146]},
+                  {name:"Griffy",     fragments:10,	req:[46,83,101,148]},
+                  {name:"Mir",        fragments:10,	req:[48,87,105,150]},
                   {name:"Nimbus",     fragments:0,	req:[50,91,109,152]},
                   {name:"Jingger",    fragments:0,	req:[52,95,113,154]},
                   {name:"Rapty",      fragments:0,	req:[54,99,117,156]},
@@ -200,7 +200,7 @@ function addFarmFrags() {
 }
 
 $(document).ready(function(){
-  knightLevel = parseInt(localStorage.getItem("knightLevel")) || 100;
+  knightLevel = parseInt(localStorage.getItem("knightLevel")) || 70;
   entries = parseInt(localStorage.getItem("entries")) || 10;
   refills = parseInt(localStorage.getItem("refills")) || 3;
   $("#input-kl").val(knightLevel);
