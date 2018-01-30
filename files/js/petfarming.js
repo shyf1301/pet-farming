@@ -220,7 +220,8 @@ function farm() {
 }
 
 function getFragments(req, fragments, maxFarmFrags) {
-  if(totalEntries > 0 && fragments < maxFarmFrags && req <= knightLevel){
+  var kltest = knightLevel % 2 == 0 ? knightLevel + 1 : knightLevel;
+  if(totalEntries > 0 && fragments < maxFarmFrags && req <= kltest){
     if(req % 2 == 0) {
       $(petImages.get(req-2)).css("filter","drop-shadow(1px 1px 5px rgba(30,220,30,1)");
       totalEntries--;
