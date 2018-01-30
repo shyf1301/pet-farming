@@ -62,7 +62,9 @@ var petList =  [
                 ];
 
 //var tierList = [40,13,16,46,19,30,34,35,18,9,31,32,33,27,28,29,47,48,49,50,41,42,39,43,44,45,0,12,15,14,25,36,24,23,17,8,21,7,3,26,37,38,1,2,4,5,6,10,11,20,22];
-var tierList = [
+var tierList = ["Hippong","Tinkey","Icy","Bamba","Boom","Wakong","Seahorse","Sarah","Moon","Octopa","Cat Knight","Cerbero","Mori","E-77","Dark Snake","Windy","Winky","Cora","Bunny","Osma","Saul","Rena","Bernard","ChiChi","Chesher","Mambo","Totem","Lamp","Sleepy","Jingger","Oscar","Nimbus","Mir","Squirrel","Phoenic","Devil","Indy","Snork","Piggy","Rapty","Black","Juda","Joe","Mummy","Potang","Uni","Joker","Grim","Woola","Leo","Griffy"];
+
+var tierListReset = [
                 "Hippong",
                 "Tinkey",
                 "Icy",
@@ -115,6 +117,7 @@ var tierList = [
                 "Leo",
                 "Griffy",
                ];
+
 function updatePetList() {
   knightLevel = parseInt($("#input-kl").val());
   entries = parseInt($("#input-entries").val());
@@ -260,11 +263,37 @@ function togglePet(petName) {
   updatePetList();
 }
 
+function createTierList() {
+  var htmlString = "";
+  for(i = 0 ; i < tierList.length; i++) {
+    var pet = petList[getPetIndex(tierList[i])];
+    var checked = pet.farm ? "checked" : "";
+    var inactive = pet.farm ? "" : " class='inactive'";
+    htmlString += '<li id="tierlist-' + pet.name + '"' + inactive + '><img class="icon-16" src="files/img/' + pet.img + '.png"><span>' + 
+                  tierList[i] + '</span><input type="checkbox" oninput="togglePet(\'' + pet.name + '\')"' + checked + 
+                  '><input type="hidden" value="' + pet.name + '"></input></li>'
+  }
+  $("#tierlist ol").html(htmlString);
+  $("#tierlist ol").sortable({
+    group: 'no-drop',
+    onDrop: function($item, container, _super) {
+      $item.removeClass(container.group.options.draggedClass).removeAttr("style")
+      $("body").removeClass(container.group.options.bodyClass)
+      updateTierList();
+    }
+  });
+}
 function updateTierList() {
   tierList = [];
   $("#tierlist li input[type='hidden'").each(function (index, element) {
     tierList.push($(element).val());
   });
+  updatePetList();
+}
+
+function resetTierList() {
+  tierList = tierListReset;
+  createTierList();
   updatePetList();
 }
 
@@ -288,23 +317,5 @@ $(document).ready(function(){
   maxFrags = 331;
   updateAllFrags();
 
-  var htmlString = "";
-  for(i = 0 ; i < tierList.length; i++) {
-    var pet = petList[getPetIndex(tierList[i])];
-    var checked = pet.farm ? "checked" : "";
-    var inactive = pet.farm ? "" : " class='inactive'";
-    htmlString += '<li id="tierlist-' + pet.name + '"' + inactive + '><img class="icon-16" src="files/img/' + pet.img + '.png"><span>' + 
-                  tierList[i] + '</span><input type="checkbox" oninput="togglePet(\'' + pet.name + '\')"' + checked + 
-                  '><input type="hidden" value="' + pet.name + '"></input></li>'
-  }
-  $("#tierlist ol").html(htmlString);
-  $("#tierlist ol").sortable({
-    group: 'no-drop',
-    onDrop: function($item, container, _super) {
-      $item.removeClass(container.group.options.draggedClass).removeAttr("style")
-      $("body").removeClass(container.group.options.bodyClass)
-      updateTierList();
-    }
-  });
-  ;
+  createTierList();
 });
