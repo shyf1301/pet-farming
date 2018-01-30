@@ -41,7 +41,7 @@ var petList =  [
                   {name:"Wakong",     fragments:0,     img:43,  farm:true,  reqs:[62,115,133,164]},
                   {name:"E-77",       fragments:0,     img:48,  farm:true,  reqs:[64,119,137,166]},
                   {name:"Windy",      fragments:0,     img:49,  farm:true,  reqs:[66,123,141,168]},
-                  {name:"Dark Snake", fragments:0,     img:50,  farm:true,  reqs:[68,127,145,170]},
+                  {name:"Dark-Snake", fragments:0,     img:50,  farm:true,  reqs:[68,127,145,170]},
                   {name:"Seahorse",   fragments:0,     img:51,  farm:true,  reqs:[70,131,149,172]},
                   {name:"Sarah",      fragments:0,     img:55,  farm:true,  reqs:[72,135,153,174]},
                   {name:"Oscar",      fragments:0,     img:56,  farm:true,  reqs:[74,139,157,176]},
@@ -55,14 +55,14 @@ var petList =  [
                   {name:"ChiChi",     fragments:0,     img:113, farm:true,  reqs:[90,171,189,192]},
                   {name:"Chesher",    fragments:0,     img:114, farm:true,  reqs:[92,175,193,194]},
                   {name:"Bamba",      fragments:0,     img:115, farm:true,  reqs:[94,179,197,196]},
-                  {name:"Cat Knight", fragments:0,     img:136, farm:true,  reqs:[96,183]},
+                  {name:"Cat-Knight", fragments:0,     img:136, farm:true,  reqs:[96,183]},
                   {name:"Mori",       fragments:0,     img:137, farm:true,  reqs:[98,187]},
                   {name:"Cerbero",    fragments:0,     img:138, farm:true,  reqs:[100,191]},
                   {name:"Octopa",     fragments:0,     img:139, farm:true,  reqs:[102,195]},
                 ];
 
 //var tierList = [40,13,16,46,19,30,34,35,18,9,31,32,33,27,28,29,47,48,49,50,41,42,39,43,44,45,0,12,15,14,25,36,24,23,17,8,21,7,3,26,37,38,1,2,4,5,6,10,11,20,22];
-var tierList = ["Hippong","Tinkey","Icy","Bamba","Boom","Wakong","Seahorse","Sarah","Moon","Octopa","Cat Knight","Cerbero","Mori","E-77","Dark Snake","Windy","Winky","Cora","Bunny","Osma","Saul","Rena","Bernard","ChiChi","Chesher","Mambo","Totem","Lamp","Sleepy","Jingger","Oscar","Nimbus","Mir","Squirrel","Phoenic","Devil","Indy","Snork","Piggy","Rapty","Black","Juda","Joe","Mummy","Potang","Uni","Joker","Grim","Woola","Leo","Griffy"];
+var tierList = ["Hippong","Tinkey","Icy","Bamba","Boom","Wakong","Seahorse","Sarah","Moon","Octopa","Cat-Knight","Cerbero","Mori","E-77","Dark-Snake","Windy","Winky","Cora","Bunny","Osma","Saul","Rena","Bernard","ChiChi","Chesher","Mambo","Totem","Lamp","Sleepy","Jingger","Oscar","Nimbus","Mir","Squirrel","Phoenic","Devil","Indy","Snork","Piggy","Rapty","Black","Juda","Joe","Mummy","Potang","Uni","Joker","Grim","Woola","Leo","Griffy"];
 
 var tierListReset = [
                 "Hippong",
@@ -75,11 +75,11 @@ var tierListReset = [
                 "Sarah",
                 "Moon",
                 "Octopa",
-                "Cat Knight",
+                "Cat-Knight",
                 "Cerbero",
                 "Mori",
                 "E-77",
-                "Dark Snake",
+                "Dark-Snake",
                 "Windy",
                 "Winky",
                 "Cora",
