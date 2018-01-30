@@ -254,7 +254,6 @@ function getPetIndex(petName) {
 }
 
 function togglePet(petName) {
-  console.log("togglepet");
   if($("#tierlist-"+ petName + " input[type='checkbox']").prop('checked')) {
     petList[getPetIndex(petName)].farm = true;
     $("#tierlist-"+petName).removeClass("inactive");
@@ -314,6 +313,10 @@ $(document).ready(function(){
   //safeguard against bad data from old version
   if(savedPetList[0].hasOwnProperty('img')) {
     petList = savedPetList;
+  }
+  for(i=0; i < petList.length; i++) {
+    petList[i].name = petList[i].name.replace(" ", "-");
+    tierList[i] = tierList[i].replace(" ", "-");
   }
 
   maxFrags = 331;
