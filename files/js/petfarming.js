@@ -254,6 +254,7 @@ function getPetIndex(petName) {
 }
 
 function togglePet(petName) {
+  console.log("togglepet");
   if($("#tierlist-"+ petName + " input[type='checkbox']").prop('checked')) {
     petList[getPetIndex(petName)].farm = true;
     $("#tierlist-"+petName).removeClass("inactive");
@@ -271,7 +272,7 @@ function createTierList() {
     var checked = pet.farm ? "checked" : "";
     var inactive = pet.farm ? "" : " class='inactive'";
     htmlString += '<li id="tierlist-' + pet.name + '"' + inactive + '><img class="icon-16" src="files/img/' + pet.img + '.png"><span>' + 
-                  tierList[i] + '</span><input type="checkbox" oninput="togglePet(\'' + pet.name + '\')"' + checked + 
+                  tierList[i] + '</span><input type="checkbox" onchange="togglePet(\'' + pet.name + '\')"' + checked + 
                   '><input type="hidden" value="' + pet.name + '"></input></li>'
   }
   $("#tierlist ol").html(htmlString);
