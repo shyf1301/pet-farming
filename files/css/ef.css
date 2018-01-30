@@ -12,9 +12,7 @@ html {
 }
 
 body {
-	margin-bottom: 60px;
 	background-color:#111; 
-	overflow-y:scroll;
 } 
 
 .footer {
@@ -28,7 +26,9 @@ body {
 }
 
 .container{
-	width:1260px;
+	display:block;
+	width:1420px;
+	margin:0 auto;
 }
 
 /* Navigation Bar */
@@ -39,14 +39,19 @@ body {
 
 
 .unit-details {
-	background-color:#2C2C2C;
-	border-radius:8px;
-	margin-top:5px;
+	background-color:#333;
+	border:1px solid #555;
+	margin-top:6px;
 	color:white;
 	padding:5px;
 	text-align:center;
 	padding-top:20px;
 	padding-bottom:20px;
+	float:left;
+	display:inline-block;
+	width:1260px;
+	float:left;
+	margin-left:6px;
 }
 
 /* Item Borders */
@@ -309,9 +314,91 @@ input {
 	background:#000;
 	border:1px solid #555;
 }
-#farminglist {
+#farminglist, #tierlist, #ownedfragments {
 	margin-left:6px;
+	margin-top:6px;
 	display:inline-block;
 	float:left;
 	padding:2px 10px 2px 10px;
+	background:#333;
+	border:1px solid #555;
+	font-size:10px;
+	color:#bbb;
+}
+body.dragging, body.dragging * {
+  cursor: move !important;
+}
+
+.dragged {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2000;
+}
+
+#tierlist ol li.placeholder {
+  position: relative;
+  /** More li styles **/
+}
+#tierlist ol li.placeholder:before {
+  position: absolute;
+  /** Define arrowhead **/
+}
+
+ol.vertical {
+  margin: 0;
+  min-height: 10px; 
+  padding:0;
+}
+ol.vertical li {
+  display: block;
+  margin: 1px;
+  padding: 0px 1px 1px 1px;
+  border: 1px solid #555;
+  background: #2a2a2a;
+  color: #ccc; 
+  cursor:pointer;
+}
+ol.vertical li span {
+	display:inline-block;
+	padding:0;
+	margin-top:2px;
+}
+ol.vertical li.placeholder {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: none; 
+}
+ol.vertical li.placeholder:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  margin-top: -2px;
+  left: -5px;
+  top: -4px;
+  border: 5px solid transparent;
+  border-left-color: red;
+  border-right: none; 
+}
+
+input[type="checkbox"] {
+	margin:2px 1px 0px 2px;
+	float:right;
+	position:relative;
+	top:1px;
+}
+
+ol.vertical li.inactive{
+  border: 1px solid #444;
+  background: #111;
+  color: #777;
+}
+
+.fragimage {
+	background-color:#222;
+}
+
+#tierlist {
+	float:left;
 }
