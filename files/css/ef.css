@@ -27,7 +27,6 @@ body {
 
 .container{
 	display:block;
-	width:1420px;
 	margin:0 auto;
 }
 
@@ -35,23 +34,6 @@ body {
 
 .nav > li > a {
 	padding-right:10px;
-}
-
-
-.unit-details {
-	background-color:#333;
-	border:1px solid #555;
-	margin-top:6px;
-	color:white;
-	padding:5px;
-	text-align:center;
-	padding-top:20px;
-	padding-bottom:20px;
-	float:left;
-	display:inline-block;
-	width:1260px;
-	float:left;
-	margin-left:6px;
 }
 
 /* Item Borders */
@@ -223,11 +205,51 @@ body {
 	color:#30ACD6;	
 }
 
-.shpage {
-	display:inline-block;
-	float:left;
+.container {
+	width:1290px;
+	margin:auto;
 }
 
+#farminglist, #tierlist, #ownedfragments, #statinputs, #sh-pages {
+	margin:4px;
+	display:inline-block;
+	padding:6px;
+	background:#333;
+	border:1px solid #555;
+	font-size:10px;
+	color:#bbb;
+}
+
+#petinputcontainer {
+	margin-top:-5px;
+}
+
+#sh-pages {
+	white-space:nowrap;
+	overflow-x:auto;
+	width:1138px;	
+	height:345px;
+}
+
+@media (max-width: 1299px) {
+  #sh-pages {
+    height:360px;
+		width:761px;
+  }
+  .container {
+  	width: 920px;
+  }
+}
+
+.sh-page {
+	display:inline-block;
+	margin-left:6px;
+	margin-top:6px;
+	vertical-align:top;
+}
+#sh-pages > div:last-of-type {
+	margin-right:6px;
+}
 .shrow a {
 	display:inline-block;
 	float:left;
@@ -243,34 +265,18 @@ body {
 	border-right:none;
 }
 
-.shpage div:last-of-type a {
+.sh-page div:last-of-type a {
 	border-bottom:1px solid #888;
 }
+
 .petimage {
 	margin:4px auto;
+	text-align:center;
 }
 
 .shrow {
 	clear:both;
 	font-size:10px;
-}
-
-.shpage {
-	margin-left:15px;
-}
-
-.shrow label {
-	display:inline-block;
-	width:39px;
-	text-align:right;
-}
-
-.shrow input {
-	margin-top:3px;
-	margin-right:1px;
-	margin-left:2px;
-	width:39px;
-	padding-left:2px;
 }
 
 button {
@@ -279,22 +285,29 @@ button {
 }
 
 #petinputcontainer {
-	margin-top:10px;	
 	font-size:10px;
 	color:#bbb;
 }
+
 #petinputcontainer:after {
 	clear:both;
 }
+
 .petinput {
-	margin-top:1px;
+	margin-top:-4px;
 	margin-bottom:1px;
 }
+
 .petinputpage {
 	display:inline-block;
 	margin-left:6px;
 	float:left;
 }
+
+#ownedfragments > div:first-of-type {
+	margin-left:0px;
+}
+
 .fragimage {
 	display:inline-block;
 	border:1px solid #555;
@@ -302,31 +315,26 @@ button {
 	height:40px;
 	margin:0;
 }
+
 .fragimage img {
 	margin:4px;
 }
+
 .petinput input {
-	width:38px;
+	width:45px;
 	margin-left:1px;
-	margin-right:10px;
 	padding-left:2px;
+}
+
+.petinput div {
+	display:inline-block;
 }
 
 input {
 	background:#000;
 	border:1px solid #555;
 }
-#farminglist, #tierlist, #ownedfragments {
-	margin-left:6px;
-	margin-top:6px;
-	display:inline-block;
-	float:left;
-	padding:2px 10px 2px 10px;
-	background:#333;
-	border:1px solid #555;
-	font-size:10px;
-	color:#bbb;
-}
+
 body.dragging, body.dragging * {
   cursor: move !important;
 }
@@ -341,6 +349,7 @@ body.dragging, body.dragging * {
   position: relative;
   /** More li styles **/
 }
+
 #tierlist ol li.placeholder:before {
   position: absolute;
   /** Define arrowhead **/
@@ -351,6 +360,7 @@ ol.vertical {
   min-height: 10px; 
   padding:0;
 }
+
 ol.vertical li {
   display: block;
   margin: 1px;
@@ -360,17 +370,20 @@ ol.vertical li {
   color: #ccc; 
   cursor:pointer;
 }
+
 ol.vertical li span {
 	display:inline-block;
 	padding:0;
 	margin-top:2px;
 }
+
 ol.vertical li.placeholder {
   position: relative;
   margin: 0;
   padding: 0;
   border: none; 
 }
+
 ol.vertical li.placeholder:before {
   position: absolute;
   content: "";
@@ -403,4 +416,33 @@ ol.vertical li.inactive{
 
 #tierlist {
 	float:left;
+}
+
+#statinputs label {
+	display:inline-block;
+	width:39px;
+	text-align:right;
+}
+
+#statinputs input {
+	margin-top:3px;
+	margin-right:1px;
+	margin-left:2px;
+	width:45px;
+	padding-left:2px;
+}
+
+.petinput div {
+	position:relative;
+	top:9px;
+}
+
+#statinputs, #farminglist {
+	display:block;
+}
+
+#subcontainer {
+	display:inline-block;
+	vertical-align:top;
+	margin:0;
 }
