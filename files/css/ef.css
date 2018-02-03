@@ -355,13 +355,13 @@ body.dragging, body.dragging * {
   /** Define arrowhead **/
 }
 
-ol.vertical {
+#sortable {
   margin: 0;
   min-height: 10px; 
   padding:0;
 }
 
-ol.vertical li {
+#sortable li {
   display: block;
   margin: 1px;
   padding: 0px 1px 1px 1px;
@@ -371,30 +371,16 @@ ol.vertical li {
   cursor:pointer;
 }
 
-ol.vertical li span {
+#sortable li span {
 	display:inline-block;
 	padding:0;
 	margin-top:2px;
 }
 
-ol.vertical li.placeholder {
+#sortable .sortable-ghost {
   position: relative;
-  margin: 0;
-  padding: 0;
-  border: none; 
-}
-
-ol.vertical li.placeholder:before {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  margin-top: -2px;
-  left: -5px;
-  top: -4px;
-  border: 5px solid transparent;
-  border-left-color: red;
-  border-right: none; 
+  border: 1px solid blue;
+  background-color:#111166;
 }
 
 input[type="checkbox"] {
@@ -404,7 +390,7 @@ input[type="checkbox"] {
 	top:1px;
 }
 
-ol.vertical li.inactive{
+#sortable li.inactive{
   border: 1px solid #444;
   background: #111;
   color: #777;

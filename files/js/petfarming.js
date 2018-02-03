@@ -171,14 +171,19 @@ function createTierList() {
                   '><input type="hidden" value="' + pet.name + '"></input></li>'
   }
   $("#tierlist ol").html(htmlString);
-  $("#tierlist ol").sortable({
+  var sortable = Sortable.create(document.getElementById('sortable'), {
+    onEnd: function (evt) {
+      updateTierList();
+    }
+  });
+  /*$("#tierlist ol").sortable({
     group: 'no-drop',
     onDrop: function($item, container, _super) {
       $item.removeClass(container.group.options.draggedClass).removeAttr("style")
       $("body").removeClass(container.group.options.bodyClass)
       updateTierList();
     }
-  });
+  });*/
 }
 
 function updateTierList() {
